@@ -8,6 +8,8 @@
   <body>
     <button onclick="my_fun()">Click Me</button>
 
+    <button id="go_live_btn">Go Live</button>
+
     <input
       type="text"
       onfocus="change_color()"
@@ -30,6 +32,21 @@
         let data = document.getElementById("field").value;
         document.getElementById("heading").innerHTML = data;
       };
+
+      let go_live_btn_ob = document.getElementById("go_live_btn");
+
+      go_live_btn_ob.addEventListener("click", () => {
+        alert("You are live now.");
+      });
+
+      go_live_btn_ob.addEventListener("click", () => {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      });
+
+      go_live_btn_ob.addEventListener("mouseover", () => {
+        go_live_btn_ob.style.backgroundColor = "red";
+      });
     </script>
   </body>
 </html>
