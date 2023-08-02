@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Navigation</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">We are learning JavaScript</h1>
+      <p id="content">
+        <span
+          >JavaScript is one of the most popular programming languages for
+          frontend as well as backend</span
+        >
+      </p>
+      <h2>Happy Learning!</h2>
+      
+    </div>
+    <button onclick="change()">Click Here for Magic</button>
+
+    <script>
+      function change() {
+        let containerOb = document.getElementById("container");
+
+        console.log(containerOb.firstElementChild.nodeName);
+
+        //first child
+        let firstChild = containerOb.firstElementChild;
+        console.log(firstChild); //<h1 id="title">Hi! Going to change!</h1>
+        firstChild.innerHTML = "Hi! Going to change!";
+      
+        //last child
+        let lastChild = containerOb.lastElementChild;
+        console.log(lastChild); //<h2 style="background-color: red; color: white;">Happy Learning!</h2>
+        lastChild.style.backgroundColor = "red";
+        lastChild.style.color = "white";
+
+        //all child nodes
+        let nodes = containerOb.children;
+        for(let n of nodes){
+            console.log(n.nodeName); //h1, p, h2
+        }
+
+        //Parent nodes
+        let parent = containerOb.parentNode;
+        console.log(parent.nodeName); //body
+
+        //previousSibling & nextSibling
+        let titleOb = document.getElementById("title");
+
+        let next = titleOb.nextElementSibling;
+        console.log(next.nodeName); //p
+      }
+    </script>
+  </body>
+</html>

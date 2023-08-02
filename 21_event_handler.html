@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+  </head>
+  <body>
+    <button onclick="my_fun()">Click Me</button>
+
+    <input
+      type="text"
+      onfocus="change_color()"
+      onkeyup="update_text()"
+      id="field"
+    />
+
+    <h1 id="heading">This is dummy text.</h1>
+
+    <script>
+      const my_fun = () => {
+        alert("This alert is from function");
+      };
+
+      const change_color = () => {
+        document.getElementById("field").style.backgroundColor = "aqua";
+      };
+
+      const update_text = () => {
+        let data = document.getElementById("field").value;
+        document.getElementById("heading").innerHTML = data;
+      };
+    </script>
+  </body>
+</html>

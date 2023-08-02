@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h1>JavaScript Array</h1>
+    <script>
+      //Creating Array
+      //Method:1
+      let arr = [12, 56, 11, 8, 90];
+      console.log(arr); //[12, 56, 11, 8, 90]
+      console.log(typeof arr); //object
+
+      //Method:2
+      let student = new Array("Vishal", "Durgesh", "Sonu");
+      console.log(student); //['Vishal', 'Durgesh', 'Sonu']
+
+      //Accessing Array elements
+      console.log(arr[0]); //12
+      console.log(arr[6]); //undefined
+      
+
+      //Array size is not fixed
+      student.push("Shivam");
+      console.log(student); //['Vishal', 'Durgesh', 'Sonu', 'Shivam']
+
+      console.log("Size of Student array: ", student.length); //4
+
+
+      //A JS array can contain elements of different datatypes
+      const myDetails = ["Vishal", 9935495382, 25];
+      console.log(myDetails); //['Vishal', 9935495382, 25]
+
+      //Array inside array
+      let emp = ["Name", 27, ["Pizza", "Cold-drink"]];
+      console.log(emp[2][1]); //Cold-drink
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Resume Generator</title>
+  </head>
+  <body>
+    <div class="container" id="resume-form">
+      <h1 class="text-center my-2"><u>Resume Generator</u></h1>
+      <!-- <p class="text-center">By Vishal Srivastava</p> -->
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <!-- first col -->
+          <h3 style="color: red">Personal Information</h3>
+
+          <div class="form-group">
+            <label for="nameField">NAME</label>
+            <input
+              type="text"
+              id="nameField"
+              placeholder="Enter Name Here"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="contactField">PHONE</label>
+            <input
+              type="text"
+              id="contactField"
+              placeholder="Enter Contact Here"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="emailField">EMAIL</label>
+            <input
+              type="text"
+              id="emailField"
+              placeholder="Enter Email Here"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="addressField">ADDRESS</label>
+            <textarea
+              type="text"
+              id="addressField"
+              placeholder="Enter Address Here"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="">UPLOAD PHOTO</label>
+            <input id="imgField" type="file" class="form-control" />
+          </div>
+
+          <p class="my-2" style="color: coral">Important Links</p>
+
+          <!-- <div class="form-group mt-2">
+                <label for="instaField">INSTAGRAM</label>
+                <input type="text" id="instaField"  placeholder="Enter Instagram Link" class="form-control" />
+            </div> -->
+
+          <div class="form-group mt-2">
+            <label for="linkedField">LINKEDIN</label>
+            <input
+              type="text"
+              id="linkedField"
+              placeholder="Enter LinkedIn Link"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="gitField">GITHUB</label>
+            <input
+              type="text"
+              id="gitField"
+              placeholder="Enter Github Link"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- second col -->
+          <h3 style="color: red">Professional Information</h3>
+
+          <div class="form-group mt-2">
+            <label for="objectiveField">OBJECTIVE</label>
+            <textarea
+              id="objectiveField"
+              type="text"
+              placeholder="Career Objective"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <div class="form-group mt-2" id="we">
+            <label for="">WORK EXPERIENCE</label>
+            <textarea
+              type="text"
+              placeholder="Work Experience"
+              class="form-control weField"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="weAddButton">
+              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+                Add More Work Experience
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group mt-2" id="aq">
+            <label for="">ACADEMIC QUALIFICATION</label>
+            <textarea
+              type="text"
+              placeholder="Academic Qualification"
+              class="form-control aqField"
+            ></textarea>
+
+            <div class="container text-center mt-2" id="aqAddButton">
+              <button onclick="addNewAQField()" class="btn btn-primary btn-sm">
+                Add More Academic Qualification
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-3">
+        <button onclick="generateResume()" class="btn btn-primary btn-lg">
+          Generate Resume
+        </button>
+      </div>
+    </div>
+
+    <!-- Resume Template -->
+    <div class="container" id="resume-template">
+      <div class="row resume">
+        <div class="col-md-4 text-center py-5 background">
+          <!-- first col -->
+          <img
+            src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg"
+            alt=""
+            id="imgT"
+            class="img-fluid myimg"
+          />
+
+          <div class="container">
+            <p id="nameT1">Ashish Mishra</p>
+            <p id="contactT">+91-2325451323</p>
+            <p id="emailT">ashish@gmail.com</p>
+            <p id="addressT">45/70- Sector-62 Noida, Uttar Pradesh</p>
+
+            <hr />
+
+            <p>
+              <!-- <a id="linkT" href=""><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a> -->
+              <a id="linkT" href="">LinkedIn</a>
+              <a id="gitT" href="">GITHUB</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-8 py-5">
+          <!-- second col -->
+          <h1 id="nameT2" class="text-center" style="font-weight: 980">
+            Ashish Mishra
+          </h1>
+          <!-- objective card -->
+          <div class="card">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
+                unde dolores saepe doloribus porro aliquam quo aut iusto maiores
+                ducimus eum, alias dolorum voluptatibus harum blanditiis
+                suscipit quos laudantium! Quasi?
+              </p>
+            </div>
+          </div>
+
+          <!-- work exp card -->
+          <div class="card mt-3">
+            <div class="card-header background">
+              <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- academic qualification card -->
+          <div class="card mt-3">
+            <div class="card-header background">
+              <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+                <li>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus, magni!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3 text-center">
+        <button onclick="printResume()" class="btn background">
+          Print Resume
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

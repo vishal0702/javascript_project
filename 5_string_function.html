@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+<body>
+    <h1>String Functions</h1>
+    <script>
+        let s1="I love JavaScript";
+        console.log(s1); //I love JavaScript
+
+        //String length
+        let len= s1.length;
+        console.log("String length: ", len); //String length:  17
+        
+        //String concatination
+        let s2="and Java";
+        let s3= s1.concat(" ",s2);
+        console.log(s3); //I love JavaScript and Java
+
+        //Character at specific index
+        let ch = s1.charAt(3);
+        console.log(ch); //o
+
+        //Index of specific character- returns 1st occurence of char
+        let ind = s1.indexOf('a');
+        console.log(ind); //8
+
+        //Last index of a character- starts from end
+        let ind2 = s1.lastIndexOf("a");
+        console.log(ind2); //10
+
+        //UpperCase
+        console.log(s1.toUpperCase()); //I LOVE JAVASCRIPT
+
+        //LowerCase
+        console.log(s1.toLowerCase()); //i love javascript
+
+        //Substring from String: substring(start, end) -> end index is excluded
+        let subString= s1.substring(0, 5);
+        console.log(subString); //I lov
+
+        //startsWith
+        console.log(s1.startsWith('I lo'));  //true
+
+        //endsWith
+        console.log(s1.endsWith('java')); //false
+
+        //Split from particular position
+        let sp= s1.split(" ");
+        console.log(typeof sp); //object
+        console.log(sp); //['I', 'love', 'JavaScript']
+
+        //Trim: Removes leading & trailing spaces
+        let s4 = "     Content with extra spaces    ";
+        let s5 = s4.trim();
+        console.log(s5); //Content with extra spaces
+
+    </script>
+</body>
+</html>

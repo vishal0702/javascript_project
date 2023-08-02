@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Operations</title>
+  </head>
+  <body>
+    <h1>String Operations</h1>
+    <script>
+      //To check equality of two strings
+      //String literal
+      let str1 = "Javascript";
+      let str2 = "Javascript";
+      //== is case sensitive
+      console.log(str1 == str2); //true
+      console.log(str1 === str2); //true
+
+      //String object
+      let str3 = new String("Java");
+      let str4 = new String("Java");
+      console.log(str3 == str4); //false
+      console.log(str3 === str4); //false
+
+      //Comparing two strings
+      //ASCII: A-65 Z-90, a-97 z-122
+      let s1 = "A";
+      let s2 = "B";
+      let result = s1.localeCompare(s2);
+      //s1=s2: 0, s1<s2: -ve, s1>s2: +ve
+      console.log(result); //-1
+
+      //To fetch ASCII value of a Character
+      console.log(s2.charCodeAt(0)); //66
+
+      //Replace a specific word with another
+      let oldString = "I hate JavaScript";
+      let newString = oldString.replace("hate", "love");
+      console.log(newString); //I love JavaScript
+
+      //accessing character- string[0]
+      console.log(oldString[0]); //I
+
+      //Coverting String to Array using split() function
+      //Split from specific position
+      let oldStringArray = oldString.split(" ");
+      console.log(oldStringArray); //['I', 'hate', 'JavaScript']
+
+      //Split each character into array
+      let newStringArray = newString.split("");
+      console.log(newStringArray); //['I', ' ', 'l', 'o', 'v', 'e', ' ', 'J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <h1>Loops in JavaScript</h1>
+    <script>
+      //1. for loop
+      for (let i = 1; i <= 10; i++) {
+        console.log(`Hey ${i}`);
+      }
+
+      //2. while loop
+      let j = 1;
+      while (j <= 10) {
+        console.log(`${j} Name: Vishal Srivastava`);
+        j++;
+      }
+
+      //3. do..while loop
+      let k = 1;
+      do {
+        console.log(`Value of k: ${k}`);
+        k++;
+      } while (k <= 5);
+
+      //4. for..in loop
+      let student = {
+        name: "John",
+        phone: 9921013530,
+        address: "Amsterdam",
+      };
+      console.log(student);
+
+      for (let key in student) {
+        console.log(`${key} => ${student[key]}`);
+        /*
+            name => John
+            phone => 9921013530
+            address => Amsterdam
+            */
+      }
+
+      //Array
+      let arr1 = ["ABC", "DEF", "GHI"];
+      for (var p in arr1) {
+        console.log(arr1[p]);
+        /*
+            ABC
+            DEF
+            GHI
+            */
+      }
+
+      //6. for-of loop
+      let arr2 = ["ABC", "DEF", "GHI"];
+      console.log(arr2); //['ABC', 'DEF', 'GHI']
+
+      for(let item of arr2){
+        console.log(item);
+        /*
+        ABC
+        DEF
+        GHI
+        */
+      }
+    </script>
+  </body>
+</html>

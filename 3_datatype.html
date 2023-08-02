@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+</head>
+<body>
+    <h1>Understanding datatypes</h1>
+
+    <script>
+        var a=10;
+        let marks= 95.6;
+        console.log(typeof a);
+        console.log(typeof marks);
+
+        let name="Vishal";
+        console.log(typeof name);
+
+        let isActive= true;
+        console.log(typeof isActive);
+
+        var un;
+        console.log(typeof un);
+
+        var nu= null;
+        console.log(typeof nu);
+
+        //Reference type
+        let names = ["First", "Second", "Third"];
+        console.log(typeof names);
+
+        let x= 23;
+        let y= 23;
+        console.log(x==y); //true
+        let xa=[23];
+        let ya=[23];
+        console.log(xa==ya); //false
+
+        let employee = {
+            name: "Ram",
+            empid: 101
+        };
+        console.log(typeof employee);
+
+        let date= new Date();
+        console.log(date);
+        console.log(typeof date);
+
+    </script>
+</body>
+</html>

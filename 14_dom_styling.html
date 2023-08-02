@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Styling</title>
+  </head>
+  <body>
+    <style>
+        .red{
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <button onclick="changeStyle()">CHANGE STYLE</button>
+    <button onclick="getStyle()">GET INFO</button>
+
+    <h2 id="main">Hello, Vishal Srivastava</h2>
+    <h2 id="sub1">Software Engineer</h2>
+    <h2 id="sub2">Cognizant Technology Solutions</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sed
+      quaerat consequatur fugit nulla neque praesentium sint aut illo,
+      reiciendis eos ab, quibusdam at, omnis magni rem? Et, amet! Asperiores
+      ipsum veritatis error laudantium aut optio, debitis eaque dolorem? Ut
+      eaque ducimus laudantium itaque dolores, libero tempora ad natus dicta
+      illum iusto laborum numquam aliquam porro est illo? Dolorem modi minus
+      perferendis, vitae eius sunt est accusantium consectetur facilis fugit
+      earum debitis quo dignissimos, praesentium ut ad quae. Unde facilis porro
+      soluta eius suscipit, aliquid illo fugit omnis sunt minus blanditiis
+      adipisci libero, sint tempora dolores itaque aspernatur totam modi, fugiat
+      excepturi. Doloribus, ab asperiores, nostrum laudantium ipsum nihil
+      aperiam vel quibusdam ratione exercitationem suscipit alias ipsa
+      repellendus temporibus. Eligendi repudiandae aut, sit dolorum cumque illo
+      rerum tempora temporibus minus expedita deleniti. Dolorem dignissimos
+      dolores temporibus commodi saepe, eius eum harum illo adipisci cumque
+      corporis. Amet perspiciatis debitis non ab id error aut odio quasi est
+      tempore, mollitia rerum, temporibus vitae? Exercitationem natus vel odio
+      doloribus labore, pariatur, earum asperiores blanditiis excepturi quo
+      repudiandae atque explicabo ipsum dolorem itaque porro sequi minima quas
+      harum. Molestias laborum nisi odit maiores nihil. Dolores minus
+      praesentium dicta cum id ea aliquam explicabo. Vero dignissimos blanditiis
+      unde placeat ipsa reiciendis beatae tempora eaque esse harum, pariatur id
+      officiis, exercitationem facere veritatis fugit illum ullam quisquam
+      perspiciatis aspernatur obcaecati. Corrupti voluptatem at omnis esse
+      facilis tempora quibusdam, laudantium numquam vitae eum molestiae aliquid
+      debitis perspiciatis similique nobis a, minus facere id laboriosam dolore
+      unde ipsam. Blanditiis totam maiores nobis debitis facilis ex, quam ipsum
+      harum a, quisquam deserunt eligendi beatae voluptatem asperiores et.
+      Explicabo rem accusamus quae quis debitis porro optio, nihil fugit culpa
+      pariatur. Iusto repudiandae voluptatum vel repellat laboriosam! Deserunt
+      praesentium aspernatur animi. Ratione officia, hic maiores sapiente magni
+      iusto nostrum doloribus a recusandae in corrupti saepe exercitationem
+      asperiores, magnam ullam laudantium deleniti nobis dolore mollitia
+      facilis! Suscipit officiis quos corrupti sit perspiciatis facilis sed
+      architecto, ducimus sunt natus modi nulla deleniti expedita blanditiis
+      iusto dolore ipsa ipsam molestias. Dicta aut, quaerat error quos
+      consequatur fugiat excepturi quasi, nesciunt delectus asperiores, quidem
+      magni facilis neque consectetur? Similique quaerat amet rerum quod minus
+      perspiciatis eos dolorum doloremque sed adipisci nesciunt eum, eveniet
+      nihil reiciendis quis architecto tempora libero aliquid molestias!
+      Temporibus fuga est ipsa maiores, eaque necessitatibus deserunt ex vel
+      doloremque voluptate earum qui at eos! Temporibus recusandae fugit odio
+      maxime ducimus vitae quam repudiandae? Minima praesentium doloribus nihil
+      eaque quibusdam quo sed a dolore assumenda fuga ipsa voluptatem porro
+      natus, atque, temporibus, expedita molestias culpa earum possimus
+      voluptates. Quisquam repellat libero laudantium obcaecati totam
+      dignissimos consequuntur est fugiat repudiandae at. Architecto dolor fuga
+      praesentium minus assumenda atque saepe accusamus itaque, distinctio
+      cumque quod harum veritatis aliquid aut repudiandae reiciendis dignissimos
+      numquam. Dicta minus eos neque. Iusto saepe odit obcaecati, earum incidunt
+      maiores, alias ullam vel iste laudantium placeat vero laborum. Molestias
+      placeat assumenda cumque explicabo sapiente, asperiores porro qui
+      repellendus facere laboriosam repellat accusamus fuga tenetur sunt nihil
+      vero dolore esse reiciendis eligendi.
+    </p>
+
+    <script>
+      //select the element
+      let mainOb = document.getElementById("main");
+      //applying style on element
+
+      const changeStyle = () => {
+        // mainOb.style.color = "blue";
+        mainOb.style.fontSize = "40px";
+        mainOb.style.border = "1px solid red";
+        mainOb.style.padding = "20px";
+        // mainOb.style.background = "#e2e2e2";
+
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+
+        mainOb.className = mainOb.className + "red";
+        //JS script styling will have preference over CSS styling
+      };
+
+      const getStyle = () => {
+        //to get user defined properties
+        // console.log(mainOb.style.color); //blue 
+        // console.log(mainOb.style.fontSize); //40px
+        // console.log(mainOb.style.border); //1px solid red
+
+        //To get the property which is not set by user
+        let style = window.getComputedStyle(mainOb);
+        console.log(style.getPropertyValue("color")); //rgb(0, 0, 0)
+        console.log(style.getPropertyValue("font")); //700 24px "Times New Roman"
+      }
+    </script>
+  </body>
+</html>

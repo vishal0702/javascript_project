@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Functions in JavaScript</h1>
+    <script>
+      //Creating Function
+      //Method:1- Traditional Approach
+      function sayHello() {
+        console.log("Hello!"); //Hello!
+        console.log("How are you?"); //How are you?
+      }
+
+      sayHello(); //function call
+
+      //Function with args & return type
+      function sum(a, b) {
+        //a,b: Formal parameter
+        let c = a + b;
+        return c;
+      }
+
+      let s = sum(12, 43); //12,43: Actual Parameter
+      console.log("Sum: ", s); //Sum:  55
+
+      //Methhod:2- Arrow Function
+      const toCelsius = (fahrenheit) => {
+        let temp = (5 / 9) * (fahrenheit - 32);
+        return temp;
+      };
+
+      let celsius = toCelsius(120);
+      console.log("Temp in celsius: ", celsius); //48.88
+    </script>
+  </body>
+</html>

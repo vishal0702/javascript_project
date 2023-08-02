@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h1>Objects in JavaScript</h1>
+    <script>
+      let ob1 = {
+        "first name": "Hritik",
+        "last name": "Roshan",
+        age: 35,
+        contact: 9876543210,
+        // display: function(){
+        //     console.log("Displaying properties");
+        //     console.log(this.contact);
+        // }
+      };
+      console.log(ob1); //{first name: 'Hritik', last name: 'Roshan', age: 35, address: 'Mumbai', contact: 9876543210}
+
+      //Accessing the properties
+      // ob1.display(); //Displaying properties 9876543210
+      console.log(ob1.age); //35
+
+      console.log(ob1["first name"]); //Hritik
+      console.log(ob1["last name"]); //Roshan
+
+      //Changing values of property
+      ob1["first name"] = "John";
+      console.log(ob1["first name"]); //John
+
+      //Adding dynamic properties
+      ob1["email"] = "vishal123@gmail.com";
+      console.log(ob1); //{first name: 'John', last name: 'Roshan', age: 35, contact: 9876543210, email: 'vishal123@gmail.com'}
+
+      //Deleting property
+      delete ob1["last name"];
+      console.log(ob1); //{first name: 'John', age: 35, contact: 9876543210, email: 'vishal123@gmail.com'}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Boxes</title>
+</head>
+<body>
+    <h1>This page is for message boxes. </h1>
+    <script>
+
+        //window:alert
+        var message= "This is an alert!";
+        // window.alert(message);
+        // alert(message);
+
+        //pompt:to enter text
+        // var name= prompt("Please enter your name");
+        // alert("Hello! "+name);
+
+        //confirmation box
+        // var choice = confirm("Do you want to open google.com");
+        // if(choice == true){
+        //     location.href = "http://www.google.com";
+        // }else{
+        //     alert("Not redirecting to Google!");
+        // }
+        // // alert(choice);
+
+        //console object-> log, info, warn, error, table, time, clear
+        console.log("Hey! This is log");
+        console.info("Hey! This is info");
+        console.warn("Hey! This is info");
+        console.error("Hey! This is error");
+
+        /*
+        setTimeout(function(){
+            console.log("Clearing console");
+            console.clear();
+        }, 3000);
+        */
+
+        var student = {
+            name: "Vishal Srivastava",
+            address: "Ayodhya",
+            contact: "1234567890"
+        };
+        console.table(student);
+    </script>
+</body>
+</html>

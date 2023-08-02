@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute</title>
+</head>
+<body>
+    <h1>DOM- Get & Set Attribute</h1>
+    <a id="url" class="alert alert-danger"  href="http://www.google.com">Google</a>
+    <button onclick="getAtt()">Get Attribute</button>
+    <button onclick="setAtt()">Set Attribute</button>
+    <script>
+        const getAtt = () => {
+            //Get the attribute
+            let urlOb = document.getElementById("url");
+            let h = urlOb.getAttribute("href");
+            console.log(h); //http://www.google.com
+            console.log(urlOb.getAttribute("id")); //url
+            console.log(urlOb.getAttribute("class")); //alert alert-danger
+        }
+
+        const setAtt = () => {
+            //Set the attribute
+            let urlOb = document.getElementById("url");
+            urlOb.setAttribute("href", "http://www.yahoo.com");
+        }
+    </script>
+</body>
+</html>

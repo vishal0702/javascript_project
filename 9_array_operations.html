@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Operations</title>
+  </head>
+  <body>
+    <h1>Array Operations in JavaScript</h1>
+    <script>
+      let names = ["John", "Peter", "Ram"];
+      console.log(names); //['John', 'Peter', 'Ram']
+
+      //Loop over an array
+      names.forEach(function(item, index){
+        console.log(index, " => ", item);
+        /*
+            0 ' => ' 'John'
+            1 ' => ' 'Peter'
+            2 ' => ' 'Ram'
+        */
+      })
+
+      //Add an element at last
+      names.push("Shyam");
+      console.log(names); //['John', 'Peter', 'Ram', 'Shyam']
+
+      //Add element at begining
+      names.unshift("Karan");
+      console.log(names); //['Karan', 'John', 'Peter', 'Ram', 'Shyam']
+
+      //Remove last element
+      let r = names.pop();
+      console.log(r); //Shyam
+      console.log(names); //['Karan', 'John', 'Peter', 'Ram']
+
+      //Remove element from begining
+      let r1= names.shift();
+      console.log(r1); //Karan
+      console.log(names); //['John', 'Peter', 'Ram']
+
+      //Get index of element
+      let i = names.indexOf("John");
+      console.log(i); //0
+
+      //Remove element from specific position
+      names.splice(1, 1); //arg1- Position, arg2- no. of elements to be removed
+      console.log(names); //['John', 'Ram']
+
+      //Copy an array
+      let copy = names.slice();
+      console.log(copy); //['John', 'Ram']
+
+      let num = [12,54, 29];
+      let sum = 0;
+      num.forEach(function(item, index){
+        sum = sum+item;
+      })
+      console.log("Sum: ", sum); //Sum: 95
+
+    </script>
+  </body>
+</html>

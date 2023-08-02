@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Timer</title>
+</head>
+<body>
+    <h1>JavaScript Timer</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="repeat()">Repeat</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        function myCode(){
+            console.log("Have a good day!");
+        }
+        //setTimeout()- executes code after a delay
+        function start(){
+            console.log("Hello Vishal! How are you?");
+            setTimeout(myCode, 5000);
+        }
+
+
+        //setInterval()- executes code at regular interval
+        let timer;
+        function repeat(){
+            console.log("Welcome to INDIA");
+            timer = setInterval(myCode, 2000);
+        }
+
+        function stop(){
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>

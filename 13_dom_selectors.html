@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+
+    <!-- JavaScript -->
+    <script>
+        console.log("Head Section");
+    </script>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+    <h2 id="banner">Vishal Srivastava</h2>
+    <h1 class="myClass">Hello! Good Morning</h1>
+    <h1 class="myClass">Hello! Good Morning</h1>
+    <h1 class="myClass">Hello! Good Morning</h1>
+
+    <!-- JavaScript -->
+    <script>
+        console.log("Body Section");
+
+        let ht = document.documentElement;
+        let bo = document.body;
+        let he = document.head;
+        let ti = document.title;
+    
+        // console.log(ht);
+        // console.log(bo);
+        // console.log(he);
+        // console.log(ti);
+
+        //Select element by Id
+        /*
+        let h2 = document.getElementById("banner");
+        //console.log(h2); //<h2 id="banner">Vishal Srivastava</h2>
+        h2.innerHTML = "Modified text";
+        h2.style.color = "red";
+        h2.style.backgroundColor = "yellow";
+        */
+
+
+        //Select element by class name
+        /*
+        let el1 = document.getElementsByClassName("myClass");
+        console.log(typeof el1); //object
+        console.log(el1);
+
+        for(let e of el1){
+            console.log(e);
+            // <h1 class="myClass">Hello! Good Morning</h1>
+            // <h1 class="myClass">Hello! Good Morning</h1>
+            // <h1 class="myClass">Hello! Good Morning</h1>
+           e.style.color = "blue";
+           e.style.backgroundColor = "yellow";
+        }
+        */
+
+        //Select element with the help of CSS selector
+
+        //querySelector => single element
+        let els1= document.querySelector('.myClass');
+        console.log(els1); //<h1 class="myClass">Hello! Good Morning</h1>
+
+        //querySelectorAll => list of elements
+        let els2= document.querySelectorAll('.myClass');
+        console.log(els2); //will return all the 3 matching nodes
+
+        for(let el of els2){
+            console.log(el);
+            el.style.color = "green";
+        }
+        
+    </script>
+</body>
+</html>

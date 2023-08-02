@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Conversion- JS</title>
+  </head>
+  <body>
+    <h1>Type Conversion in JavaScript</h1>
+    <script>
+      
+      //String Conversion
+      let a = 12;
+      console.log(typeof a); //number
+
+      let as = String(a);
+      console.log(typeof as); //String
+      console.log(as); //12- String
+      console.log(a.toString()); //12-String
+
+      //Numeric Conversion
+      let value = "1221";
+      let f1 = "23.51";
+      let value1 = Number(value);
+      console.log(typeof value1); //number
+      console.log(value + 5); //12215
+      console.log(value1 + 5); //1226
+
+      let pInt = parseInt(value);
+      console.log(typeof pInt); //number
+
+      let f2 = Number(f1);
+      console.log(typeof f2); //number
+
+      let pFloat = parseFloat(f1);
+      console.log(typeof pFloat); //number
+
+      console.log(Number(undefined)); //NaN
+      console.log(Number(null)); //0
+      console.log(Number(true)); //1
+      console.log(Number(false)); //0
+      
+
+      //Boolean Conversion
+      let ex="false";
+      console.log(ex); //false
+      console.log(typeof ex); //String
+
+      let exb= Boolean(ex);
+      console.log(exb); //true
+      //If String contains 1 or more characters then it will become "true" on conversion
+      console.log(typeof exb);  //boolean
+    </script>
+  </body>
+</html>
