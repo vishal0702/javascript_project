@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Getters, Setters & Constructor</title>
+  </head>
+  <body>
+    <script>
+      //student object
+      let student1 = {
+        name: "Ajay Pandey",
+        college: "IIT Kanpur",
+        city: "Kanpur",
+
+        get getName() {
+          return this.name;
+        },
+
+        set setName(name) {
+          console.log("Setting value to object using set");
+          this.name = name;
+        },
+
+        get getCollege() {
+          return this.college;
+        },
+
+        set setCollege(college) {
+          console.log("Setting value to object using set");
+          this.college = college;
+        },
+
+        display: function () {
+          return `${this.name} : ${this.college} : ${this.city}`;
+        },
+      };
+
+      console.log(student1.display()); //Ajay Pandey : IIT Kanpur : Kanpur
+
+      //Change the name using setter
+      student1.setName = "Vishal Srivastava";
+      console.log(student1.display()); //Vishal Srivastava : IIT Kanpur : Kanpur
+
+      //Getter
+      console.log(student1.getName); //Vishal Srivastava
+
+      //Object constructor
+      function Employee(id, phone, age) {
+        this.empId = id;
+        this.empPhone = phone;
+        this.empAge = age;
+
+        this.display = function () {
+          return this.empId + " : " + this.empPhone + " : " + this.empAge;
+        };
+      }
+
+      let e1 = new Employee(101, 4923232, 23);
+      console.log(e1.display()); //101 : 4923232 : 23
+
+      let e2 = new Employee(102, 4616321136, 26);
+      console.log(e2.display()); //102 : 4616321136 : 26
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class & Object</title>
+</head>
+<body>
+    <h1>Class & Object in JavaScript</h1>
+
+    <script>
+        class Student
+        {
+            constructor(name, phone)
+            {
+                this.name = name;
+                this.phone = phone
+                console.log("Object created...");
+            }   
+            
+            showDetails()
+            {
+                console.log("Name: "+this.name);
+                console.log("Phone: "+this.phone);
+                console.log("----------------------");
+            }
+
+            getName(){
+                return this.name.toUpperCase();
+            }
+        }
+
+        //Creating object
+        let s1 = new Student("Vishal", 41523263);
+        s1.showDetails();
+        console.log(s1.getName());
+        
+    </script>
+</body>
+</html>
