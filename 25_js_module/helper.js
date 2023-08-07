@@ -9,3 +9,4 @@ export default function printName(){
 }
 
 //export {var1, function};
+//export default printName;
